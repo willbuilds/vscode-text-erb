@@ -1,0 +1,34 @@
+{
+  "publisher": "will-builds",
+  "description": "Text ERB language support for VS Code",
+  "name": "text-erb-lang",
+  "displayName": "Text ERB",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "text-erb",
+        "aliases": [
+          "Text ERB"
+        ],
+        "extensions": [
+          ".text.erb"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "text-erb",
+        "scopeName": "text.erb.plain",
+        "path": "./syntaxes/text-erb.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.erb": "ruby"
+        }
+      }
+    ]
+  }
+}

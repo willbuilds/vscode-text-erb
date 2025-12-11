@@ -1,0 +1,26 @@
+{
+  "scopeName": "text.erb.plain",
+  "patterns": [
+    { "include": "#erb" }
+  ],
+  "repository": {
+    "erb": {
+      "patterns": [
+        {
+          "name": "meta.embedded.erb",
+          "begin": "<%[#=-]?",
+          "beginCaptures": {
+            "0": { "name": "punctuation.section.embedded.begin.erb" }
+          },
+          "end": "-?%>",
+          "endCaptures": {
+            "0": { "name": "punctuation.section.embedded.end.erb" }
+          },
+          "patterns": [
+            { "include": "source.ruby" }
+          ]
+        }
+      ]
+    }
+  }
+}
